@@ -21,7 +21,8 @@ public class EmployeeTest {
     public void testDirectorAsEmployee(){
         employee = new Director("Ahmed", 456789, 9500, "FrondEnd", 350000);
         assertEquals(350000,  ((Director) employee).getBudget() , 0);
-        assertEquals(95, employee.payBonus(),0);
+//        here payBonus is 2%
+        assertEquals(190, employee.payBonus(),0);
     }
 
     @Test
