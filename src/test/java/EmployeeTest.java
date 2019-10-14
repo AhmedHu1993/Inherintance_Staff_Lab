@@ -39,4 +39,13 @@ public class EmployeeTest {
         assertEquals(2000, employee.getSalary());
     }
 
+    @Test
+    public void testDeveloperCanChangeNameAndNotNull(){
+        employee = new Developer("Ahmed", 123, 1800);
+        employee.setName(null);
+        assertEquals("Ahmed", employee.getName());
+        employee.setName("");
+        assertEquals("Ahmed", employee.getName());
+    }
+
 }
