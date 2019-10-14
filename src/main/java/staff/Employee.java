@@ -25,7 +25,9 @@ public abstract class Employee {
     }
 
     public void raiseSalary(double increase){
-        salary += increase;
+        if (increase > 0) {
+            salary += increase;
+        }
     }
 
     public double payBonus(){

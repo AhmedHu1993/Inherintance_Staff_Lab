@@ -2,6 +2,7 @@ import management.Director;
 import management.Manager;
 import org.junit.Test;
 import staff.Employee;
+import techStaff.DatabaseAdmin;
 import techStaff.Developer;
 
 import static org.junit.Assert.assertEquals;
@@ -29,6 +30,13 @@ public class EmployeeTest {
         assertEquals("Ahmed", employee.getName());
         assertEquals(123789, employee.getNiNum());
         assertEquals(1900, employee.getSalary());
+    }
+
+    @Test
+    public void testDbAdminRaiseOnlyPositiveNumbers(){
+        employee = new DatabaseAdmin("Ahmed", 1237890, 2000);
+        employee.raiseSalary(-450);
+        assertEquals(2000, employee.getSalary());
     }
 
 }
